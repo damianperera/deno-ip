@@ -32,7 +32,7 @@ const myEmailGeolocation = await geoLocate.getEmail('ip@deno.land').then((res: o
 })
 ```
 
-If your having any issues using this module please check [test.ts](test.ts).
+If your having any issues using this module please check [test.ts](https://deno.land/x/ip/test.ts).
 
 # License
 
