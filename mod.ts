@@ -1,7 +1,7 @@
 import { soxa as api } from 'https://deno.land/x/soxa/mod.ts'
 
 export namespace IP {
-    
+
     interface Service {
         get(ipAddress?: string): Promise<any>
     }
@@ -39,7 +39,7 @@ export namespace IP {
             this.apiToken = apiToken
         }
 
-        get = (ipAddress: string): Promise<object> => new Promise<object>(
+        get = (ipAddress?: string): Promise<object> => new Promise<object>(
             (resolve, reject) => {
                 const options: object = {
                     params: {
