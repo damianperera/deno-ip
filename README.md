@@ -40,8 +40,9 @@ const myEmailGeolocation = await geoLocate.getEmail('ip@deno.land').then((res: o
 If your having any issues using this module please check [test.ts](https://deno.land/x/ip/test.ts).
 
 ## Running Tests
-In order to run the tests execute the following command from the root directory.
+In order to run the tests first export your API token to `IPIFY_API_TOKEN` in your local environment and execute Deno test command from the root directory.
 ```bash
+$ export IPIFY_API_TOKEN=xxxx
 $ deno test --allow-net --allow-env
 ```
 # License
