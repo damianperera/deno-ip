@@ -16,23 +16,28 @@ const apiToken: string = 'xxx'
 const ipAddress = new IP.Address()
 const geoLocate = new IP.GeoLocation(apiToken)
 
-const myIPAddress = await ipAddress.get().then((res: string) => {
+// Fetch the current IP address
+await ipAddress.get().then((res: string) => {
     console.log(res)
 }))
 
-const myIPAddressGeolocation = await geoLocate.get().then((res: object) => {
+// Fetch geolocation data on the current IP address
+await geoLocate.get().then((res: object) => {
     console.log(res)
 })
 
-const googleIPAddressGeolocation = await geoLocate.get('8.8.8.8').then((res: object) => {
+// Fetch geolocation data on a provided IP address
+await geoLocate.get('8.8.8.8').then((res: object) => {
     console.log(res)
 })
 
-const myDomainGeolocation = await geoLocate.getDomain('deno.land').then((res: object) => {
+// Fetch geolocation data on a provided domain
+await geoLocate.getDomain('deno.land').then((res: object) => {
     console.log(res)
 })
 
-const myEmailGeolocation = await geoLocate.getEmail('ip@deno.land').then((res: object) => {
+// Fetch geolocation data on a provided email
+await geoLocate.getEmail('ip@deno.land').then((res: object) => {
     console.log(res)
 })
 ```
