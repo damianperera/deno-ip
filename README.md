@@ -1,6 +1,4 @@
-# isIP
-
-[![tag](https://img.shields.io/github/tag/ako-deno/isIP.svg)](https://github.com/ako-deno/isIP/tags)
+# IP
 
 An IP address library for Deno which provides access to [ipify.org](https://ipify.org) APIs to detect your IP address or lookup geolocation data on a provided IP address, domain or email.
 
