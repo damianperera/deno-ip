@@ -31,7 +31,7 @@ export namespace IP {
 
     export class GeoLocation implements Service {
 
-        private readonly BASE_URL: string = 'http://geo.ipify.org'
+        private readonly BASE_URL: string = 'http://geo.ipify.org/api/v1'
         private httpClient: typeof api = api
         private apiToken: string
 
@@ -50,7 +50,7 @@ export namespace IP {
 
                 this.httpClient.get(this.BASE_URL, options)
                     .then((response) => {
-                        resolve(response)
+                        resolve(response.data)
                     })
                     .catch((error) => {
                         reject(error)
@@ -69,7 +69,7 @@ export namespace IP {
 
                 this.httpClient.get(this.BASE_URL, options)
                     .then((response) => {
-                        resolve(response)
+                        resolve(response.data)
                     })
                     .catch((error) => {
                         reject(error)
@@ -88,7 +88,7 @@ export namespace IP {
 
                 this.httpClient.get(this.BASE_URL, options)
                     .then((response) => {
-                        resolve(response)
+                        resolve(response.data)
                     })
                     .catch((error) => {
                         reject(error)
