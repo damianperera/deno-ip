@@ -19,7 +19,7 @@ const myIPAddressGeolocation = await geoLocate.get().then((res: object) => {
     console.log(res)
 })
 
-const myIPAddressGeolocation = await geoLocate.get().then((res: object) => {
+const googleIPAddressGeolocation = await geoLocate.get('8.8.8.8').then((res: object) => {
     console.log(res)
 })
 
