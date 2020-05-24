@@ -1,4 +1,5 @@
 # IP
+[![Deno Module](https://img.shields.io/badge/Module-Deno-blue)](https://deno.land/x) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An IP address library for Deno which provides access to [ipify.org](https://ipify.org) APIs to detect your IP address or lookup geolocation data on a provided IP address, domain or email.
 
@@ -38,6 +39,11 @@ const myEmailGeolocation = await geoLocate.getEmail('ip@deno.land').then((res: o
 
 If your having any issues using this module please check [test.ts](https://deno.land/x/ip/test.ts).
 
+## Running Tests
+In order to run the tests execute the following command from the root directory.
+```bash
+$ deno test --allow-net --allow-env
+```
 # License
 
 [MIT](./LICENSE)
