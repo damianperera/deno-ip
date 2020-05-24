@@ -12,7 +12,7 @@ While the `Address` class can be used without an API token, in order to use the 
 import { IP } from 'https://deno.land/x/ip/mod.ts'
 
 const apiToken: string = 'xxx'
-const ipAddress = new IP.Address() // does not require an API token
+const ipAddress = new IP.Address()
 const geoLocate = new IP.GeoLocation(apiToken)
 
 const myIPAddress = await ipAddress.get().then((res: string) => {
