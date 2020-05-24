@@ -4,7 +4,11 @@ An IP address library for Deno which provides access to [ipify.org](https://ipif
 
 # Usage
 
-```javascript
+## API Token
+While the `Address` class can be used without an API token, in order to use the `GeoLocation` class you need to obtain one from [geo.ipify.org](https://geo.ipify.org).
+
+## Example
+```typescript
 import { IP } from 'https://deno.land/x/ip/mod.ts'
 
 const apiToken: string = 'xxx'
