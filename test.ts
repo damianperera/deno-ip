@@ -1,4 +1,4 @@
-import { assert, assertEquals } from 'https://deno.land/std/testing/asserts.ts'
+import { assert } from 'https://deno.land/std/testing/asserts.ts'
 import { isIP } from 'https://deno.land/x/isIP/mod.ts'
 import { IP } from './mod.ts'
 
