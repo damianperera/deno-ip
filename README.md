@@ -16,35 +16,41 @@ const apiToken: string = 'xxx'
 const ipAddress = new IP.Address()
 const geoLocate = new IP.GeoLocation(apiToken)
 
-const myIPAddress = await ipAddress.get().then((res: string) => {
+// Fetch the current IP address
+await ipAddress.get().then((res: string) => {
     console.log(res)
 }))
 
-const myIPAddressGeolocation = await geoLocate.get().then((res: object) => {
+// Fetch geolocation data on the current IP address
+await geoLocate.get().then((res: object) => {
     console.log(res)
 })
 
-const googleIPAddressGeolocation = await geoLocate.get('8.8.8.8').then((res: object) => {
+// Fetch geolocation data on a provided IP address
+await geoLocate.get('8.8.8.8').then((res: object) => {
     console.log(res)
 })
 
-const myDomainGeolocation = await geoLocate.getDomain('deno.land').then((res: object) => {
+// Fetch geolocation data on a provided domain
+await geoLocate.getDomain('deno.land').then((res: object) => {
     console.log(res)
 })
 
-const myEmailGeolocation = await geoLocate.getEmail('ip@deno.land').then((res: object) => {
+// Fetch geolocation data on a provided email
+await geoLocate.getEmail('ip@deno.land').then((res: object) => {
     console.log(res)
 })
 ```
-
-If your having any issues using this module please check [test.ts](https://deno.land/x/ip/test.ts).
 
 ## Running Tests
 In order to run the tests first export your API token to `IPIFY_API_TOKEN` in your local environment and execute the Deno test command from the root directory.
-```bash
-export IPIFY_API_TOKEN=xxxx
-deno test --allow-net --allow-env
+```console
+foo@bar:~$ export IPIFY_API_TOKEN=xxxx
+foo@bar:~$ deno test --allow-net --allow-env
 ```
+
+If your having any issues using this module please refer [test.ts](https://deno.land/x/ip/test.ts) for usage examples.
+
 # License
 
 [MIT](./LICENSE)
